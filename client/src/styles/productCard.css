@@ -1,0 +1,17 @@
+.Card {
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.card-image {
+  height: 150px;
+  width: 150px !important;
+  margin: 0 auto !important;
+}
+
+.card-button {
+  margin: 0 auto !important;
+}

@@ -1,0 +1,26 @@
+.s-payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 25px;
+  margin: 10% auto;
+}
+
+.s-media {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.payment-div {
+  min-height: 60vh;
+}
+
+.payment-card {
+  padding: 15px;
+  margin: 10% auto;
+  float: none;
+}
+
+.pay-button {
+  width: 100%;
+}

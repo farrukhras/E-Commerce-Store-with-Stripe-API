@@ -1,0 +1,30 @@
+.heading {
+  text-align: center;
+}
+
+.checkout-section {
+  width: 75%;
+  min-height: 90vh;
+  margin: 50px auto 0;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+.quantity {
+  display: flex;
+}
+
+.remove-cursor {
+  padding-right: 5px;
+}
+
+.add-cursor {
+  padding-left:5px;
+}
+
+.cursor {
+  cursor: pointer;
+}

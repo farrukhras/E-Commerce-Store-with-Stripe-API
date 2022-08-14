@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  color: white;
+  font-weight: bold;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.description {
+  padding: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
+}
+
+.img-homepage {  
+  width: 100%;
+  height: 100%;
+}
+
+.img-button {
+  width: 100%;
+  height: 150px;
+}
+
+.img-list {
+  margin: 0 15% 0 15%;
+}
