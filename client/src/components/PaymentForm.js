@@ -48,7 +48,7 @@ function PaymentForm() {
     if (!error && totalPrice !== 0) {
       try {
         const {id} = paymentMethod;
-        const response = await axios.post('https://test-ecommerce-eight.vercel.app/payment', {
+        const response = await axios.post('https://e-commerce-store-with-stripe-api.vercel.app/payment', {
           amount: totalPrice*100,
           id
         })
