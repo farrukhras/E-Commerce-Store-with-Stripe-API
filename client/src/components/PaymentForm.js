@@ -97,7 +97,7 @@ function PaymentForm() {
               </CardActions>
             </Card>
             <br />
-            <div style={{textAlign: "center"}}>
+            <div style={{textAlign: "center", color: "red"}}>
               <Typography>
                 <span style={{fontWeight: "bold"}}>*Test card number: </span>  4242 4242 4242 4242 
               </Typography>
