@@ -2,9 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
-// const router = require("express").Router();
-
-// app.use(express.static('public'))
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST_KEY);
 const bodyParser = require("body-parser");
