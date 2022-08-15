@@ -5,7 +5,7 @@ function Footer(props) {
   return (
     <AppBar position="sticky" elevation={0} component="footer" color="default">
       <Toolbar style={{ justifyContent: "center" }}>
-        <Typography variant="caption">Copyright © Farrukh Rasool</Typography>
+        <Typography variant="caption">Copyright © 2022</Typography>
       </Toolbar>
     </AppBar>
   );

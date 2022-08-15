@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { Card, CardActions, CardContent, Button, Typography} from '@mui/material';
 import PaymentSuccessFull from './PaymentSuccessFull';
+import EmptyCart from './EmptyCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart } from './storeSlice';
 import axios from 'axios';
@@ -26,7 +27,7 @@ const CARD_ELEMENT_OPTIONS = {
 };
 
 function PaymentForm() {
-  const { totalPrice } = useSelector((state) => state.store);
+  const { totalPrice, cartItems, isPaymentSuccessful } = useSelector((state) => state.store);
   const dispatch = useDispatch();
 
   const [success, setSuccess] = useState(false);
@@ -43,8 +44,6 @@ function PaymentForm() {
       type: 'card',
       card: elements.getElement(CardElement)
     })
-    
-    console.log('here')
 
     if (!error && totalPrice !== 0) {
       try {
@@ -71,32 +70,35 @@ function PaymentForm() {
   return (
     <div>
       {
-        !success ?
-        <div className='payment-div'>
-          <Card 
-            sx={{ maxWidth: 500 }} 
-            className='payment-card'
-          >
-            <CardContent>
-              <Typography sx={{ fontSize: 24 }} color="text.secondary" gutterBottom>
-                Complete Payment
-              </Typography>
-              <br />
-              <CardElement options={CARD_ELEMENT_OPTIONS}/>
-            </CardContent>
-            <CardActions>
-              <Button 
-                variant="contained" 
-                className='pay-button' 
-                onClick={(e) => handleSubmit(e)}
-              >
-                Pay
-              </Button>
-            </CardActions>
-          </Card>
-        </div> 
-        : 
-        <PaymentSuccessFull />
+        !isPaymentSuccessful && cartItems.length === 0 ? 
+        <EmptyCart /> 
+        :
+          !success ?
+          <div className='payment-div'>
+            <Card 
+              sx={{ maxWidth: 500 }} 
+              className='payment-card'
+            >
+              <CardContent>
+                <Typography sx={{ fontSize: 24 }} color="text.secondary" gutterBottom>
+                  Complete Payment
+                </Typography>
+                <br />
+                <CardElement options={CARD_ELEMENT_OPTIONS}/>
+              </CardContent>
+              <CardActions>
+                <Button 
+                  variant="contained" 
+                  className='pay-button' 
+                  onClick={(e) => handleSubmit(e)}
+                >
+                  Pay
+                </Button>
+              </CardActions>
+            </Card>
+          </div> 
+          : 
+          <PaymentSuccessFull />
       }
     </div>
   );

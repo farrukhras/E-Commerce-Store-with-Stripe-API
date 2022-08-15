@@ -8,6 +8,7 @@ const initialState = {
   totalCount: 0,
   cartItems: [],
   totalPrice: 0,
+  isPaymentSuccessful: false,
 };
 
 export const fetchCategories = createAsyncThunk(
@@ -95,6 +96,7 @@ const storeSlice = createSlice({
       state.cartItems = [];
       state.totalCount = 0;
       state.totalPrice = 0;
+      state.isPaymentSuccessful = true
     }
   },
   extraReducers: {

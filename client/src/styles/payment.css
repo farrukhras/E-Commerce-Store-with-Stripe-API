@@ -7,7 +7,7 @@
 }
 
 .s-media {
-  width: 200px;
+  width: 100px !important;
   margin: 0 auto;
 }
 
@@ -22,5 +22,6 @@
 }
 
 .pay-button {
-  width: 100%;
+  width: 100% !important;
+  text-decoration: none;
 }
