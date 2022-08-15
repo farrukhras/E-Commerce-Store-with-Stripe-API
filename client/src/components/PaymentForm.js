@@ -48,7 +48,7 @@ function PaymentForm() {
     if (!error && totalPrice !== 0) {
       try {
         const {id} = paymentMethod;
-        const response = await axios.post('http://localhost:8000/payment', {
+        const response = await axios.post('https://test-ecommerce-eight.vercel.app/payment', {
           amount: totalPrice*100,
           id
         })
