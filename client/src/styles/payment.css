@@ -12,12 +12,14 @@
 }
 
 .payment-div {
-  min-height: 60vh;
+  min-height: 65vh;
+  background-color: bisque;
 }
 
 .payment-card {
   padding: 15px;
   margin: 10% auto;
+  margin-bottom: 0%;
   float: none;
 }
 

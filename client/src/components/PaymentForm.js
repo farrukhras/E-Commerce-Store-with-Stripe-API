@@ -96,6 +96,15 @@ function PaymentForm() {
                 </Button>
               </CardActions>
             </Card>
+            <br />
+            <div style={{textAlign: "center"}}>
+              <Typography>
+                <span style={{fontWeight: "bold"}}>*Test card number: </span>  4242 4242 4242 4242 
+              </Typography>
+              <Typography>
+                *The other card details (expiry date, CVC, and ZIP) can be random.
+              </Typography>
+            </div>  
           </div> 
           : 
           <PaymentSuccessFull />
